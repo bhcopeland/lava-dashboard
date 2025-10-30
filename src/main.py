@@ -6,14 +6,17 @@ from plotting import (
     plot_submitter_breakdown,
 
     plot_execution_time_by_submitter,
+    plot_utilization_per_device_type,
+    plot_weekly_utilization_device_type,
 
-    plot_cost_per_device_type,
     plot_latency_by_device_type_over_time,
     plot_queue_length_over_time,
     plot_results_count_health_checks_actual_device,
     plot_results_count_health_checks_device_type,
     plot_results_count_jobs_actual_device,
     plot_results_count_jobs_device_type,
+    plot_duration_jobs_device_type,
+    plot_duration_jobs_actual_device,
     plot_scheduling_latency_over_time,
     plot_timeline_by_id,
     plot_timeline_by_job_result,
@@ -54,14 +57,17 @@ def main():
     plot_submitter_breakdown(jobs, output_dir)
 
     plot_execution_time_by_submitter(jobs, output_dir)
+    plot_utilization_per_device_type(jobs, output_dir)
+    plot_weekly_utilization_device_type(jobs, output_dir)
 
-    plot_cost_per_device_type(jobs, output_dir)
     plot_latency_by_device_type_over_time(jobs, output_dir)
     plot_queue_length_over_time(events, output_dir)
     plot_results_count_health_checks_actual_device(jobs, output_dir)
     plot_results_count_health_checks_device_type(jobs, output_dir)
     plot_results_count_jobs_actual_device(jobs, output_dir)
     plot_results_count_jobs_device_type(jobs, output_dir)
+    plot_duration_jobs_device_type(jobs, output_dir)
+    plot_duration_jobs_actual_device(jobs, output_dir)
     plot_scheduling_latency_over_time(jobs, output_dir)
     plot_timeline_by_id(jobs, output_dir)
     plot_timeline_by_job_result(jobs, output_dir)
